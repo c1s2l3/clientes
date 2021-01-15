@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body{background-color:#cbf2d6;text-align: center;font-family: Verdana;
+    }
+	
+form {width:500px; display: inline-block;
+}
+label{display: inline-block; width: 150px; color: #fff;}
+input{display: inline-block; width: 400px;background-color:#e39762;font-size: 16px;padding: 5px;}
+
+.fila1{padding: 10px;font-size: 16px; 
+	background-color: #247d45; color:#101b29;
+}
+.fila2{padding: 10px;font-size: 16px; 
+	background-color: #154d2a; color:#101b29;
+}
+
+.btn {width: 70px;}
+.btn hover {background-color: #fff;}
+
