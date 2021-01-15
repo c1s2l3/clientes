@@ -3,17 +3,17 @@ class Bbdd{
     public $host = "localhost";  //no deberían ser públicas, sino privadas
     public $usuario = "root";
     public $contrasinal = "";
-    public $bbdd = "jardineria";
+    public $bbdd = "clientes";
 
     public $conexion;   //elevamos la variable a atributo, para poder usarla de modo global
 
     public function __construct(){ //función constructor abre canal de comunicación con la bbdd
        $this->conexion = new mysqli(
-           $this->host, $this->usuario, $this->contrasinal, $this->bbdd); // $this-> para que se refiera a la propiedad de la clase señalada
+           $this->host, $this->usuario, $this->contrasinal, $this->clientes); // $this-> para que se refiera a la propiedad de la clase señalada
     }
 
     public function seleccionArticulos(){
-        $consulta = "SELECT * FROM productos";
+        $consulta = "SELECT * FROM clientes";
         $solicitud = $this->conexion->query($consulta); // al usar $this-> hay que quitar el $ a la variable
 
         while($producto = mysqli_fetch_object($solicitud)){  //este bucle nos muestra los productos. Cada paso dentro del bucle es uno de los productos. La información llega como un objeto (object(stdClass)-standard class-). _fetch_ASSOC nos lo devuelve como un array, etc
